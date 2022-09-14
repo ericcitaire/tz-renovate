@@ -1,6 +1,6 @@
 # Dépendances
 
-Maven, NPM, images Docker, etc.
+Maven (Java), NPM (Javascript), gem (Ruby), Pypi (Python), images Docker, etc.
 
 ## Stratégies de mise à jour des dépendances
 
@@ -25,7 +25,9 @@ Différentes stratégies de mise à jour possibles (patch, mineure, majeure, tou
 
 Cette stratégie peut s'avérer chaotique et dangereuse.
 
-## Versions stricte et mises à jour manuelles
+Certains gestionnaires de dépendances adressent ce problème avec un fichier de lock (`package-lock.json`, `yarn.lock`, `Gemfile.lock`, etc.), ce qui revient, à peu de choses près, à avoir des versions strictes.
+
+## Versions strictes et mises à jour manuelles
 
 Les versions des dépendances sont déclarées de façon stricte.
 
@@ -71,11 +73,13 @@ Sa configuration est co-localisée avec le code à scanner (fichier `renovate.js
 
 Pour chaque dépendance à mettre à jour, Renovate créé une *PR* dédiée.
 
-Exemple de PR sur Github : https://github.com/ericcitaire/motif/pull/24
+Exemple de PR sur Github : https://github.com/ericcitaire/motif/pull/44
 
 Renovate rebase la branche si nécessaire, ferme la PR si elle n'est plus d'actualité, etc.
 
 Possibilité de configurer des règles de mise à jour : regroupement de dépendances, politique de mise à jour (version majeure, mineure, patch).
+
+Exemple de configuration : https://github.com/ericcitaire/motif/blob/main/renovate.json
 
 Supporte de nombreuse plateformes de gestion de sources : Bitbucket, Github, GitLab, etc.
 https://docs.renovatebot.com/modules/platform/
