@@ -1,6 +1,6 @@
 # Dépendances
 
-Maven (Java), NPM (Javascript), gem (Ruby), Pypi (Python), images Docker, etc.
+Maven (Java), NPM (Javascript), gem (Ruby), Pypi (Python), images Docker, Ansible Galaxy, Terraform, Git submodules, etc.
 
 ## Stratégies de mise à jour des dépendances
 
@@ -65,7 +65,7 @@ Un automate inspecte le code, identifie les dépendances utilisées et propose d
 
 **Inconvénients :**
 
-* effort de mise en place
+* temps de mise en place du bot (effort mutualisé)
 
 ## Renovate
 
@@ -88,6 +88,8 @@ Supporte de nombreux gestionnaires de dépendances et sémantiques de versionnin
 https://docs.renovatebot.com/modules/manager/
 
 Supporte de nombreuses sources de données : Maven Central, npm, Docker Hub, etc. et permet également de les surcharger pour utiliser des miroirs (Artifactory, Nexus, etc.).
+
+Permet la mise à jour de dépendances internes.
 
 ## Autres solutions
 
